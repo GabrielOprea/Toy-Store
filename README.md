@@ -4,11 +4,12 @@ it acts as a command-line terminal, allowing the user to change the store curren
 add some discounts, add a new currency, list all the products in the store and much more.
 
 Oprea-Groza Gabriel
-323CB
 
 My program writes all the output to the RESULT.OUT file, and in 
 exceptional cases, messages corresponding to STDOUT are displayed.
 The tests were made by me, to confirm the correctness of the application.
+Design patterns used: Builder, Singleton, Strategy
+
 
 The testX_out folder contains the result.out file and the other
 .csv or .bin files generated.
