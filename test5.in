@@ -1,0 +1,68 @@
+addcurrency GBP £ 1.10
+addcurrency RUB ₽ 0.011
+addcurrency USD $ 0.82
+addcurrency ARS $ 0.0096
+addcurrency JPY ¥ 0.0079
+addcurrency CNY ¥ 0.13
+addcurrency KRW ₩ 0.00075
+addcurrency BGN лв 0.51
+addcurrency EGP E£ 0.052
+addcurrency MXN $ 0.041
+addcurrency KWD KD 2.71
+addcurrency CHF ₣ 0.93
+addcurrency GIP £ 1.116
+addcurrency INR ₹ 0.011
+addcurrency NOK kr 0.097
+listcurrencies
+addiscount PERCENTAGE 12 "-12% Yuletide"
+addiscount PERCENTAGE 25 "Added regional prices in Argentina"
+listproducts
+loadcsv amazon_co-ecommerce_sample.csv
+savestore test5_backup3.bin
+savecsv test5_cleaned_before_discount.csv
+addiscount PERCENTAGE 15 "-15% for Anime lovers"
+addiscount PERCENTAGE 7.5 "Because we love Taco"
+savestore test5_backup.bin
+addiscount FIXED 10 "-10 New Year's Eve Voucher"
+applydiscount PERCENTAGE 12
+savecsv test5_cleaned_after_discount.csv
+listproducts
+updateparity JPY 0.0078
+listproductsbymanufacturer "Magic the Gathering: Holiday Gift Box"
+loadstore test5_backup.bin
+listdiscounts
+setstorecurrency JPY
+listmanufacturers
+savestore test5_backup2.bin
+applydiscount PERCENTAGE 15
+savecsv test5_Japanese_store.csv
+addiscount PERCENTAGE 5 "-5% Anubis's blessing"
+loadstore test5_backup2.bin
+setstorecurrency MXN
+applydiscount PERCENTAGE 7.5
+listproducts
+savecsv test5_Mexican_store.csv
+setstorecurrency EGP
+applydiscount PERCENTAGE 5
+addiscount PERCENTAGE 5 "-5% Amun Ra's blessing"
+applydiscount PERCENTAGE 5
+listproductsbymanufacturer "Ban Dai"
+getstorecurrency
+savecsv test5_Egyptian_store.csv
+loadcsv test5_Japanese_store.csv
+addiscount FIXED 1.5 "Odin's gift for clients in Norway"
+addiscount PERCENTAGE 1.6 "Fenrir's wrath"
+setstorecurrency NOK
+listdiscounts
+applydiscount FIXED 1
+applydiscount FIXED 1.6
+applydiscount PERCENTAGE 1.5
+applydiscount FIXED 1.5
+applydiscount PERCENTAGE 1.6
+applydiscount PERCENTAGE 12
+savecsv test5_Norwegian_store.csv
+loadstore test5_backup3.bin
+setstorecurrency ARS
+applydiscount PERCENTAGE 25
+savecsv test5_Argentinian_store.csv
+quit

@@ -1,0 +1,48 @@
+addiscount PERCENTAGE 5 "First time bonus for crypto-purchases!"
+listproducts
+listdiscounts
+listcurrencies
+loadcsv amazon_co-ecommerce_sample.csv
+addcurrency RON RON 0.21
+listproductsbymanufacturer Konami
+addcurrency BTC ₿ 28639.10
+updateparity RON 0.20
+addcurrency LTC Ł 113.95
+listproductsbymanufacturer "How Wheels"
+addcurrency ETH ETH 917.78
+applydiscount PERCENTAGE 92.213
+listproductsbymanufacturer "Apples to Pears"
+addcurrency USDT ₮ 0.83
+getstorecurrency
+addiscount PERCENTAGE -6.382 "Bitcoin decrease"
+addiscount PERCENTAGE 9.1235 "Litecoin increase"
+listproductsbymanufacturer Yu-Gi-Oh!
+addcurrency GBP £ 1.08
+setstorecurrency BTC
+applydiscount PERCENTAGE -6.3821
+savestore test4_backup1.bin
+applydiscount PERCENTAGE -6.382
+showproduct ad857bf30ecee8d64ec49b5de110f537
+listdiscounts
+calculatetotal 170e19dea0b328b9502ff23dc38c03b6 09d719cca594e58bc655d2634e003121 49f6494a8ecbc732784711b4b5c221c1 ad857bf30ecee8d64ec49b5de110f537 f19b3ad1e77fc1c862e86624d2e9e355 d1576215a780ee74805a6997f81c88d8
+savecsv test4_Bitcoin.csv
+setstorecurrency LTC
+savestore test4_backup2.bin
+applydiscount PERCENTAGE 9.1235
+addiscount PERCENTAGE 6.12 "Still increasing!"
+applydiscount FIXED 6.12
+listdiscounts
+applydiscount PERCENTAGE 6.12
+listcurrencies
+calculatetotal 170e19dea0b328b9502ff23dc38c03b6 09d719cca594e58bc655d2634e003121 49f6494a8ecbc732784711b4b5c221c1 ad857bf30ecee8d64ec49b5de110f537 f19b3ad1e77fc1c862e86624d2e9e355 d1576215a780ee74805a6997f81c88d8
+savecsv test4_Litecoin.csv
+setstorecurrency USDT
+applydiscount PERCENTAGE 5
+calculatetotal 170e19dea0b328b9502ff23dc38c03b6 09d719cca594e58bc655d2634e003121 49f6494a8ecbc732784711b4b5c221c1 ad857bf30ecee8d64ec49b5de110f537 f19b3ad1e77fc1c862e86624d2e9e355 d1576215a780ee74805a6997f81c88d8
+savecsv test4_Tether.csv
+loadstore test4_backup2.bin
+setstorecurrency ETH
+getstorecurrency
+loadstore test4_backup.bin
+getstorecurrency
+quit

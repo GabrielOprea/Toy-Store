@@ -1,0 +1,31 @@
+loadcsv amazon_co-ecommerce_sample.csv
+addcurrency GBP £ 1.10
+loadcsv amazon_co-ecommerce_sample.csv
+addiscount PERCENTAGE 33 "-33% Black Friday"
+calculatetotal abcdefghijklmnopqrstuvwxyz123456
+applydiscount PERCENTAGE 50
+applydiscount PERCENTAGE 33
+setstorecurrency YEN
+updateparity RUB 0.02
+loadcsv russian_borscht.csv
+addiscount FIXED 1.2 "Sale for Russian lads"
+addiscount FIXED 1 "Sale for Romanian lads"
+addiscount PERCENTAGE 10 "Week-end sale"
+listdiscounts
+showproduct 12345678987654321
+addcurrency RON RON 0.25
+addcurrency RUB ₽ 0.011
+setstorecurrency RON
+savestore test3_backup.bin
+applydiscount FIXED 1
+setstorecurrency RUB
+applydiscount FIXED 1.3
+applydiscount FIXED 1.2
+updateparity RON 0.21
+setstorecurrency RON
+savecsv test3_after_inflation.csv
+loadstore test3_backup.bin
+showproduct 40c14c1a5e03c0d10a6713a849cf9576
+calculatetotal 035a449d650f2b0d908a7b920fb611b9 ae53ae168e599400f145116c076f4be6 c3d1be6a7b2c0ad1155f6c668211c2d3
+savecsv test3_before_inflation.csv
+quit
